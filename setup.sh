@@ -15,6 +15,7 @@ youtube-dl --extract-audio --audio-format mp3 https://youtu.be/gzOdfzuFJ3E
 youtube-dl --extract-audio --audio-format mp3 https://youtu.be/LKHm2N-knDQ
 youtube-dl --extract-audio --audio-format mp3 https://youtu.be/f5_wn8mexmM
 cd ..
+mv .music /tmp
 exit
 
 echo "Hope u enjoy :)"
