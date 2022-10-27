@@ -3,8 +3,8 @@ if [ "$EUID" -ne 0 ]
         then echo "Please run as root."
         exit 1
 fi
-chmod 755 once.sh
-cp once.sh /usr/bin/once
+chmod 755 oncebot/once.sh
+cp oncebot/once.sh /usr/bin/once
 rm -rf oncebot
 echo "Hope u enjoy :)"
 echo
