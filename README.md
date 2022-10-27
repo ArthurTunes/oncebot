@@ -10,7 +10,7 @@ Oncebot is a robot based in shell script in development to automatize some tools
 <img src="https://64.media.tumblr.com/97ad091674305dc3ebc4c867d88d9fa7/tumblr_ologyrzGmZ1vzljfio3_250.gifv" align="right"></div>
 
 ## Installation 🦄
-For installation, i made a setup for help you  🐧
+For installation, i made a setup to help you  🐧
 
  ```powershell
 git clone https://github.com/ArthurTunes/oncebot
