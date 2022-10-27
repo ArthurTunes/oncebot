@@ -445,8 +445,29 @@ Musica()
         read -p "Digite a sua preferencia: " MUSICA
                 case $MUSICA in
                 *'kpop'*)
-                echo "Recomendo essa pedrada aqui, ó, só as coreana dos sonhos."
-                open "https://open.spotify.com/playlist/4Vy2AYC5bZcGF50HXK2NKR?si=613cc69b97f245c5"
+                echo "É o que eu mais gosto, sério."
+                read -p "Você quer ouvir o que eu mais gosto? " KPOP
+                if [ $KPOP == 'nao' ] 
+                then
+                	echo "Ah, tá bom..."
+                	sleep 2
+                	open "https://open.spotify.com/playlist/4Vy2AYC5bZcGF50HXK2NKR?si=613cc69b97f245c5"
+                else
+                	case $NUM in
+                		*'1'*)
+                			open .music/'REAL YOU-gzOdfzuFJ3E.mp3'
+				;;
+				*'2'*)
+					open .music/'PUSH & PULL (JIHYO,SANA,DAHYUN)-LKHm2N-knDQ.mp3'
+				;;
+				*'3'*)
+					open .music/CRUEL-HQXBAGVSOyY.mp3
+				;;
+				*'0'*)
+					open .music/"TWICE 'The Feels' M_V-f5_wn8mexmM.mp3"
+				;;
+			esac
+		fi                			
                 ;;
                 *'funk'*)
                 echo "Ohh, funk? Kimdas Reformed é a mais pesada do baile, parça, pega"
