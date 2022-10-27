@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "Bem vindo ao oncebot"
-echo 
-echo "Caso precise de ajuda, digite help"
-echo
-read -p "O robô twice responde...: " PERGUNTA
+# Made by Arthur Tunes
+# aka nayeon lindinha
+# Fique a vontade pra pegar o que quiser
+# o código não é meu, é nosso :D
+
 
 #------------------------------Variáveis---------------------------------#
 
@@ -14,6 +14,50 @@ NUM=$(($RANDOM%4))
 
 #--------------------------------Funções---------------------------------#
 
+Inicio()
+{
+
+                echo
+        sleep 1
+        case $NUM in
+        *'0'*)
+                echo "Bem vindo ao oncebot"
+        	echo 
+        	echo "Caso precise de ajuda, digite help"
+        	echo
+        	read -p "Fale com o robô twice: " PERGUNTA
+        ;;
+        *'1'*)
+                echo "Prr- Robô do Bolsonar--"
+        	echo 
+        	sleep 1
+        	echo "KKKKKKKKKKKKKKKKKKKKKKKK"
+                echo
+        	echo "pegadinha, sou um robô e não tenho lado político."
+        	echo
+        	read -p "Robô bolso-- Robô Once está aqui pra te ouvir, diga: " PERGUNTA
+        ;;
+        *'2'*)
+                echo "You have stolen my heart, oh, yeah (oh, yeah)"
+                sleep 1
+		echo "Never let it go, oh, oh, no"
+		sleep 1
+		echo "Never let it go, oh, oh, oh"
+		sleep 1
+		read -p "Tô ouvindo música aqui mas pode falar que eu tô ouvindo: " PERGUNTA
+        ;;
+        *'3'*)
+                echo "Mano, na moral, tô quase chorando ouvindo essa bomba aqui https://www.youtube.com/watch?v=HQXBAGVSOyY"
+                sleep 1
+                echo
+                echo "snif, snif"
+                sleep 1
+                echo
+                read -p "Tá, tô melhor, pode falar aí... snif--: " PERGUNTA
+        ;;
+        esac
+
+}
 
 Help()
 {
@@ -29,22 +73,85 @@ Help()
 
 Gobuster()
 {
-        echo "Quer achar diretório é?"
-        echo "Me passa o alvo nesse modelo: http://192.168.0.1"
+        echo
         sleep 1
-        read -p "Qual é o alvo? me passa aí:  " IP
-        gobuster dir -u $IP -w /usr/share/wordlists/dirb/common.txt
-        echo ""
-        echo "Prontinho."
+        case $NUM in
+        *'0'*)
+                echo "Quer achar diretório é?"
+        	echo "Me passa o alvo nesse modelo: http://192.168.0.1"
+        	sleep 1
+        	read -p "Qual é o alvo? me passa aí:  " IP
+        	gobuster dir -u $IP -w /usr/share/wordlists/dirb/common.txt
+        	echo ""
+        	echo "Prontinho."
+        ;;
+        *'1'*)
+                echo "Tá, bruteforce de diretório é trampo pro gobuster, não pra mim"
+                echo "GOBUSTER, BROTA PAPAI, VEM DE LADIN"
+                sleep 1
+                echo "Gobuster: é de ladin papai"
+                sleep 1
+        	echo "Gobuster: Me passa o alvo nesse modelo: http://192.168.0.1"
+        	sleep 1
+        	read -p "Gobuster: Qual é o alvo? me passa aí:  " IP
+        	gobuster dir -u $IP -w /usr/share/wordlists/dirb/common.txt
+        	echo ""
+        	echo "Prontinho, papai."
+        ;;
+        *'2'*)
+                echo "Modo sério on."
+        	echo "Me passa o alvo assim: http://192.168.0.1"
+        	sleep 1
+        	read -p "Alvo:  " IP
+        	gobuster dir -u $IP -w /usr/share/wordlists/dirb/common.txt
+        	echo ""
+        	echo "Feito, modo sério off."
+        ;;
+        *'3'*)
+                echo "Ô watisap man, tá ligado que papis is bilingual right?"
+                echo "Gimme the..."
+                sleep 2
+                echo "Jesus Cristo como é que fala aquela palavra em inglix?"
+                sleep 1
+                echo "Lembrei, lembrei, calma"
+        	echo "O address tem que estar that way assim, tá?: http://192.168.0.1"
+        	sleep 1
+        	read -p "Gimme the target 🤙: " IP
+        	gobuster dir -u $IP -w /usr/share/wordlists/dirb/common.txt
+        	echo ""
+        	echo "Done little daddy ;)."
+        ;;
+        esac
 }
 
 Namoro()
 {
-        echo "Eu não namoro, sou uma inteligência artificial."
-        echo "Mas adoraria namorar essa mocinha aqui:"
-        echo "https://www.instagram.com/nayeonyny/"
+        echo
         sleep 1
-        echo "Mas se falar que não queria também, você é hipócrita"
+        case $NUM in
+        *'0'*)
+                echo "Eu não namoro, sou uma inteligência artificial, mano"
+                sleep 2
+                echo "Mas não quer dizer que eu não gostaria de namorar."
+                sleep 2
+        ;;
+        *'1'*)
+                echo "SIM SIM SIM SIM, EU NAMORO"
+                sleep 1
+                echo "Mas é que ela ainda não sabe..."
+                sleep 2
+        ;;
+        *'2'*)
+                echo "A inteligencia artificial não namora mas o criador"
+                sleep 1
+                echo "também não namora."
+                sleep 2
+        ;;
+        *'3'*)
+                echo "Nah, sou crente, não gosto de ficar falando dessas coisas"
+                sleep 2
+        ;;
+        esac
 }
 
 Nayeon()
@@ -180,8 +287,11 @@ Windows()
 }
 
 
+#-----------------------------Programa----------------------------------#
 
-#-------------------------Case--------------------------------#
+Inicio
+
+#--------------------------------Case-----------------------------------#
 
 
 
