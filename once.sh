@@ -455,16 +455,16 @@ Musica()
                 else
                 	case $NUM in
                 		*'1'*)
-                			open .music/'REAL YOU-gzOdfzuFJ3E.mp3'
+                			open /tmp/.music/'REAL YOU-gzOdfzuFJ3E.mp3'
 				;;
 				*'2'*)
-					open .music/'PUSH & PULL (JIHYO,SANA,DAHYUN)-LKHm2N-knDQ.mp3'
+					open /tmp/.music/'PUSH & PULL (JIHYO,SANA,DAHYUN)-LKHm2N-knDQ.mp3'
 				;;
 				*'3'*)
-					open .music/CRUEL-HQXBAGVSOyY.mp3
+					open /tmp/.music/CRUEL-HQXBAGVSOyY.mp3
 				;;
 				*'0'*)
-					open .music/"TWICE 'The Feels' M_V-f5_wn8mexmM.mp3"
+					open /tmp/.music/"TWICE 'The Feels' M_V-f5_wn8mexmM.mp3"
 				;;
 			esac
 		fi                			
