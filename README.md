@@ -3,7 +3,7 @@
 
 
 ## What is?
-Oncebot is a robot based in shell script in development to automatize some tools choosen by me (and for some fun) 🐰
+Oncebot is a robot based in shell script in development to automatize some tools choosen by me (and for some fun)
 
 <div align="center">
 <img src="https://64.media.tumblr.com/391057e9162623d603368c594efaab1f/tumblr_ologyrzGmZ1vzljfio1_250.gifv" align="left">
@@ -42,7 +42,7 @@ once.sh
 
 ‎ ‎ ‎ ‎ ‎ ‎ 
 
-## Commands 👑
+## Commands 🐰
 
 <img src="https://64.media.tumblr.com/042a6ff9584db4ca10028bfd567bdd92/tumblr_ologyrzGmZ1vzljfio4_250.gifv" align="left">
 <img src="https://64.media.tumblr.com/dd09a317335597ae17f4d90ead191eba/tumblr_ologyrzGmZ1vzljfio5_250.gifv" align="right"></div>
