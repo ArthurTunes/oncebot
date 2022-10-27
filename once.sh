@@ -9,6 +9,7 @@
 
 HORAS=`date | cut -d" " -f4 | cut -d: -f1`
 PERIODO=`date | cut -d" " -f5 | cut -d: -f1`
+DIA=`date | cut -d" " -f1 | cut -d: -f1`
 RM='RM94624'
 NUM=$(($RANDOM%4))
 
@@ -176,38 +177,226 @@ Nayeon()
 
 Conectividade()
 {
-        echo "Just a second, plz."
-        echo "Verificando..."
+       
+        echo
         sleep 1
-        ping www.fiap.com.br
-        echo "Verificado, vê aí"
+        case $NUM in
+        *'0'*)
+                read -p "Digite o IP a ser verificado: " IP
+		COMMAND="ping -c4 -q $IP"
+		$COMMAND
+		if [ $? -eq 0 ]
+		then
+		        echo -e "\nO Servidor está online"
+		else
+		        echo -e "\nO Servidor está offline"
+		fi
+        ;;
+        *'1'*)
+                read -p "Qual é o alvo para testarmos a conectividade?: " IP
+		COMMAND="ping -c4 -q $IP"
+		$COMMAND
+		if [ $? -eq 0 ]
+		then
+		        echo -e "\n$IP está online"
+		else
+		        echo -e "\n$IP está offline"
+		fi
+        ;;
+        *'2'*)
+                read -p "Talk that talk the host to me, talk: " IP
+		COMMAND="ping -c4 -q $IP"
+		$COMMAND
+		if [ $? -eq 0 ]
+		then
+		        echo -e "\nThe Server is online"
+		else
+		        echo -e "\nThe Server is offline"
+		fi
+        ;;
+        *'3'*)
+               	echo "Vamos jogar ping pong?"
+               	read -p "Solta o IP pro ping: " IP
+		COMMAND="ping -c4 -q $IP"
+		$COMMAND
+		if [ $? -eq 0 ]
+		then
+		        echo -e "\nPong!"
+		else
+		        echo -e "\nPerdi, nenhuma resposta :/"
+		fi
+        ;;
+        esac
 }
 
 Vulnerabilidade()
 {
-        echo "Calma aí, vou chamar meu parceiro nmap."
-        echo "NMAAAAAAP, TÁ AÍ? BROTA CHEFE"
+               
+        echo
         sleep 1
-        read -p "Oi, oi, qual é o host? " HOST
-        nmap -sV -T4 -A $HOST
-        echo "Pronto"
+        case $NUM in
+        *'0'*)
+                echo "Calma aí, vou chamar meu parceiro nmap."
+		echo "NMAAAAAAP, TÁ AÍ? BROTA CHEFE"
+		sleep 1
+		read -p "Oi, oi, qual é o host? " HOST
+		nmap -sV -T5 -A $HOST
+		echo "Pronto"
+	;;
+        *'1'*)
+                echo "Só um segundo, deixa a música acabar."
+                sleep 1
+		echo "Boa, fala aí"
+		read -p "Qual é o seu alvo? " HOST
+		nmap -sV -T5 -A $HOST
+		echo "Mais alguma coisa?"
+		sleep 1
+		echo "Bom, fechou, até mais"
+        ;;
+        *'2'*)
+                echo "Antes de tudo, recomendação de música rápida"
+                echo "Automotivo The World Cave."
+                sleep 1
+		echo "Me agradece depois."
+		read -p "Enfim, fala aí o alvo: " HOST
+		nmap -sV -T5 -A $HOST
+		echo "Pronto, só mais uma indicação musical"
+		sleep 1
+		echo "Me and your mama."
+		sleep 1
+        ;;
+        *'3'*)
+               	echo "Jutsu de transformação!"
+                sleep 1
+		echo "..."
+		sleep 1
+		echo "Olá, meu nome é nmap e estou aqui para ajudar."
+		read -p "Qual é o seu alvo? " HOST
+		nmap -sV -T5 -A $HOST
+		echo "Prontinho, voltando pro estado natural..."
+		sleep 1
+		echo "pff--"
+		sleep 1
+		echo "Boa, sou eu de novokkkkkk"
+        ;;
+        esac
 }
 
 Horas()
 {
-        if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
-        then
-                echo -e "おはようございます >_<"
-                echo "O japonês disse bom dia!"
+        echo
+        sleep 1
+        case $NUM in
+        *'0'*)
+		if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+        	then
+                	echo -e "おはようございます >_<"
+                	echo "O japonês disse bom dia!"
 
-        elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
-        then
-                echo -e "ZGVib3JhX3ZvbHRhX3ByYV9taW1fcGZ2"
-                echo "Não decripta, só saiba que é de tarde, tá?"
-        else
-                echo -e "Boa pa nois parça, a lua cheia ilumina a viela, firme?"
+        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	then
+                	echo -e "ZGVib3JhX3ZvbHRhX3ByYV9taW1fcGZ2"
+                	echo "Não decripta, só saiba que é de tarde, tá?"
+        	else
+                	echo -e "Boa pa nois parça, a lua cheia ilumina a viela, firme?"
 
-        fi
+        	fi
+        ;;
+        *'1'*)
+                if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+        	then
+                	echo -e "Olhei pro céu e a minha córnea tá queimando"
+                	sleep 1
+                	echo "Se pá é bom dia"
+
+        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	then
+                	echo -e "Sente esse ventinho, essa brisa da tarde"
+                	sleep 1
+                	echo "Uma ótima tarde pra você e sua família, shalom 🙏"
+        	else
+                	echo -e "Jão, QUE BREU TRUTA, acende a luz aí parça"
+
+        	fi
+        ;;
+        *'2'*)
+                if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+        	then
+                	echo -e "おはよう世界 Good morning world!"
+                	sleep 1
+                	echo "Esse é do Dr. Stone, bom dia seu otakinho fedido"
+
+        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	then
+                	echo -e "Pós faculdade, chegar cansado em casa, mó sono mano"
+                	sleep 1
+                	echo "Boa tarde, vamo pra festa do japa"
+                	sleep 1
+                	echo "Japa cama que ninguém é de ferro, chefe"
+        	else
+                	echo "B"
+                	sleep 1
+                	echo "O"
+                	sleep 1
+                	echo "A"
+                	sleep 1
+                	echo ""
+                	sleep 1
+                	echo "N"
+                	sleep 1
+                	echo "O"
+                	sleep 1
+                	echo "I"
+                	sleep 1
+                	echo "T"
+                	sleep 1
+                	echo "E"
+                	sleep 1
+        	fi
+        ;;
+        *'3'*)
+        	case $DIA in
+			*"Thu"*)
+				DIA="Quinta"
+			;;
+			*"Fri"*)
+				DIA="Sexta"	
+			;;
+			*"Sat"*)
+				DIA="Sábado"
+			;;
+			*"Sun"*)
+				DIA="Domingo"
+			;;
+			*"Mon"*)
+				DIA="Segunda"
+			;;
+			*"Tue"*)
+				DIA="Terça"
+			;;
+			*"Wed"*)
+				DIA="Quarta"
+			;;
+        	esac
+        	
+		if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+        	then
+                	echo "Bom dia ☕️"
+                	echo "Uma ótima $DIA, Deus bençoa"
+
+        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	then
+                	echo "Boa tarde 🍵"
+                	echo "Uma ótima tarde de $DIA"
+        	else
+                	echo "Boa noite 🍻"
+                	echo "Uma ótima noite de $DIA pra você"
+                	
+
+        	fi
+        ;;
+      
+        esac
 
 }
 
@@ -308,7 +497,19 @@ case $PERGUNTA in
         *'conectivida'*)
                 Conectividade
         ;;
+        *'ping'*)
+                Conectividade
+        ;;
+        *'host'*)
+                Conectividade
+        ;;        
         *'vulnera'*)
+                Vulnerabilidade
+        ;;
+        *'nmap'*)
+                Vulnerabilidade
+        ;;
+        *'port'*)
                 Vulnerabilidade
         ;;
         *'manha'*)
