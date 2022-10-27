@@ -10,7 +10,7 @@ read -p "O robô twice responde...: " PERGUNTA
 HORAS=`date | cut -d" " -f4 | cut -d: -f1`
 PERIODO=`date | cut -d" " -f5 | cut -d: -f1`
 RM='RM94624'
-
+NUM=$(($RANDOM%4))
 
 #--------------------------------Funções---------------------------------#
 
@@ -49,7 +49,22 @@ Namoro()
 
 Nayeon()
 {
-        echo "Eu amo ela, pelo amor de deus."
+        echo
+        sleep 1
+        case $NUM in
+        *'0'*)
+                echo "Pop, pop, pop!"
+        ;;
+        *'1'*)
+                echo "I mean L-word ~love~"
+        ;;
+        *'2'*)
+                echo "I'm like TT, just like TT"
+        ;;
+        *'3'*)
+                echo "You're my baby blue love, and get my body rockin'"
+        ;;
+        esac
 }
 
 Conectividade()
@@ -215,6 +230,12 @@ case $PERGUNTA in
         ;;
         *'windows'*)
                 Windows
+        ;;
+        *'help'*)
+                Help
+        ;;
+        *'ajuda'*)
+                Help
         ;;
         *''*)
                 Erro
