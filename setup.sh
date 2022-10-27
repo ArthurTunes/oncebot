@@ -4,7 +4,7 @@ if [ "$EUID" -ne 0 ]
         exit 1
 fi
 chmod 755 once.sh
-cp once.sh /usr/bin
+cp once.sh /usr/bin/once
 rm -rf oncebot
 echo "Hope u enjoy :)"
 echo
