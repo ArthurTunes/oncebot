@@ -7,6 +7,7 @@
 
 #------------------------------Variáveis---------------------------------#
 
+H=`date +%H`
 HORAS=`date | cut -d" " -f4 | cut -d: -f1`
 PERIODO=`date | cut -d" " -f5 | cut -d: -f1`
 DIA=`date | cut -d" " -f1 | cut -d: -f1`
