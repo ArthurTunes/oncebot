@@ -288,12 +288,12 @@ Horas()
         sleep 1
         case $NUM in
         *'0'*)
-		if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+		if [ $H -lt 12 ];
         	then
                 	echo -e "おはようございます >_<"
                 	echo "O japonês disse bom dia!"
 
-        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	elif [ $H -lt 18 ];
         	then
                 	echo -e "ZGVib3JhX3ZvbHRhX3ByYV9taW1fcGZ2"
                 	echo "Não decripta, só saiba que é de tarde, tá?"
@@ -303,13 +303,13 @@ Horas()
         	fi
         ;;
         *'1'*)
-                if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+                if [ $H -lt 18 ];
         	then
                 	echo -e "Olhei pro céu e a minha córnea tá queimando"
                 	sleep 1
                 	echo "Se pá é bom dia"
 
-        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	elif [ $H -lt 18 ];
         	then
                 	echo -e "Sente esse ventinho, essa brisa da tarde"
                 	sleep 1
@@ -320,13 +320,13 @@ Horas()
         	fi
         ;;
         *'2'*)
-                if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+                if [ $H -lt 18 ];
         	then
                 	echo -e "おはよう世界 Good morning world!"
                 	sleep 1
                 	echo "Esse é do Dr. Stone, bom dia seu otakinho fedido"
 
-        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	elif [ $H -lt 18 ];
         	then
                 	echo -e "Pós faculdade, chegar cansado em casa, mó sono mano"
                 	sleep 1
@@ -379,12 +379,12 @@ Horas()
 			;;
         	esac
         	
-		if (("$HORAS" >= "06")) && (("$HORAS" <= "12")) && (("$PERIODO" == "AM"))
+		if [ $H -lt 18 ];
         	then
                 	echo "Bom dia ☕️"
                 	echo "Uma ótima $DIA, Deus bençoa"
 
-        	elif (("$HORAS" >= "1")) && (("$HORAS" <= "6")) && (("$PERIODO" == "PM"))
+        	elif [ $H -lt 18 ];
         	then
                 	echo "Boa tarde 🍵"
                 	echo "Uma ótima tarde de $DIA"
