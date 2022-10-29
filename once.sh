@@ -304,7 +304,7 @@ Horas()
         	fi
         ;;
         *'1'*)
-                if [ $H -lt 18 ];
+                if [ $H -lt 12 ];
         	then
                 	echo -e "Olhei pro céu e a minha córnea tá queimando"
                 	sleep 1
@@ -321,7 +321,7 @@ Horas()
         	fi
         ;;
         *'2'*)
-                if [ $H -lt 18 ];
+                if [ $H -lt 12 ];
         	then
                 	echo -e "おはよう世界 Good morning world!"
                 	sleep 1
@@ -380,7 +380,7 @@ Horas()
 			;;
         	esac
         	
-		if [ $H -lt 18 ];
+		if [ $H -lt 12 ];
         	then
                 	echo "Bom dia ☕️"
                 	echo "Uma ótima $DIA, Deus bençoa"
